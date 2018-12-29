@@ -1,0 +1,684 @@
+Helloo..
+
+git init : initialize repository in current folder
+
+git status: track the status of files as it now says our gitdemo.txt is untracked
+
+git add gitdemo.txt : it adds the file on master branch but yet not be committed
+
+git commit : to commit changes to master
+
+git log: to check the log of last commit
+
+git add . : add all the new files added in the folder
+
+git add *.html : add all the file of html as extension
+
+touch .gitignore : creates the .gitignore file in folder
+
+git commit -a -m '..//change any' : update the chnge ignoring others
+
+git Branch MyBranch : create new Branch
+
+git checkout MyBranch: switch ot new Branch
+
+touch index.css: creates new file in new Branch
+
+git merge MyBranch : merger the branch to master
+
+git stash: saved working directory
+
+git stash apply: commit changes to master
+
+git remote: create remote local repositories and we need to pull chnges manually
+
+git clone url : clone the exiting repository in project
+
+git remote -v: shows the url of origin of the cloning repository
+
+git fetch origin: go after the server and fetch all the data to last modified or commited to that repository
+fetch all the data to your local repository by not merging data automatically u need to merge manually.
+
+git pull origin: fetch and merge changes to your local repository
+
+git push origin master : push changes to master
+
+
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git init
+Initialized empty Git repository in C:/Users/muska/Desktop/gitdemo/.git/
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        gitdemo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git add gitdemo.txt
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   gitdemo.txt
+
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   gitdemo.txt
+
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   gitdemo.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   gitdemo.txt
+
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git add gitdemo.txt
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git commit
+hint: Waiting for your editor to close the file...
+
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git commit
+[master (root-commit) c8aa656] Initial commit
+ 1 file changed, 8 insertions(+)
+ create mode 100644 gitdemo.txt
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git add gitdeo.txt
+fatal: pathspec 'gitdeo.txt' did not match any files
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git add gitdemo.txt
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git commit -m 'git commit : to commit changes to master'
+[master ee878a0] git commit : to commit changes to master
+ 1 file changed, 1 insertion(+)
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git log
+commit ee878a06565b71b112a0e748efa6ed56d4977c07 (HEAD -> master)
+Author: muskan kataria <muskankataria2408@gmail.com>
+Date:   Sat Dec 29 12:12:18 2018 +0530
+
+    git commit : to commit changes to master
+
+commit c8aa656bb00a8fcd3368948037ef8054a433c1cc
+Author: muskan kataria <muskankataria2408@gmail.com>
+Date:   Sat Dec 29 12:08:42 2018 +0530
+
+    Initial commit
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git add gitdemo.txt
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git commit
+[master 75be303] Initial commit
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index.html
+        index.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git add .
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git add *.html
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git add gitdemo.txt
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   gitdemo.txt
+        new file:   index.html
+        new file:   index.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        demo.log
+        demo.log.txt
+
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ touch .gitignore
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   gitdemo.txt
+        new file:   index.html
+        new file:   index.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   gitdemo.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        demo.log
+        demo.log.txt
+
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ touch .gitignore
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git add .
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git commit -m 'adding ignore file'
+[master c37744c] adding ignore file
+ 5 files changed, 9 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 demo.log.txt
+ create mode 100644 index.html
+ create mode 100644 index.txt
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git branch MyBranch
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git checkout MyBranch
+Switched to branch 'MyBranch'
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ touch index.css
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git add .
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git commit -m 'new updates'
+[MyBranch c3ab1b1] new updates
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.css
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git checkout master
+Switched to branch 'master'
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git merge MyBranch
+Updating c37744c..c3ab1b1
+Fast-forward
+ index.css | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.css
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git commit -a -m
+error: switch `m' requires a value
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git commit -a -m 'change'
+[master f55fce1] change
+ 1 file changed, 9 insertions(+)
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git checkout MyBranch
+error: Your local changes to the following files would be overwritten by checkout:
+        gitdemo.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git commit
+On branch master
+Changes not staged for commit:
+        modified:   gitdemo.txt
+
+no changes added to commit
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git add gitdemo.txt
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git commit
+[master ee2575d] Commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git checkout MyBranch
+Switched to branch 'MyBranch'
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git commit
+On branch MyBranch
+nothing to commit, working tree clean
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git merer master
+git: 'merer' is not a git command. See 'git --help'.
+
+The most similar command is
+        rerere
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git merge master
+Updating c3ab1b1..ee2575d
+Fast-forward
+ gitdemo.txt | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git status
+On branch MyBranch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   gitdemo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git add .
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git commit -a -m 'merge from master'
+[MyBranch 59eda8b] merge from master
+ 1 file changed, 1 insertion(+)
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git status
+On branch MyBranch
+nothing to commit, working tree clean
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git mergetool
+No files need merging
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ touch newfile.txt
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git checkout master
+Switched to branch 'master'
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        newfile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (master)
+$ git checkout MyBranch
+Switched to branch 'MyBranch'
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git add .
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git status
+On branch MyBranch
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   newfile.txt
+
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git stash
+Saved working directory and index state WIP on MyBranch: 59eda8b merge from master
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git status
+On branch MyBranch
+nothing to commit, working tree clean
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git stash apply
+On branch MyBranch
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   newfile.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   gitdemo.txt
+
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git add gitdemo.txt
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git remote
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git clone https://github.com/RoadToSoftwareFactory/GitBasicsCz.git
+Cloning into 'GitBasicsCz'...
+remote: Enumerating objects: 17, done.
+remote: Total 17 (delta 0), reused 0 (delta 0), pack-reused 17
+Unpacking objects: 100% (17/17), done.
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git remote
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ cd gitbasicscz
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git remote
+origin
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git remote -v
+origin  https://github.com/RoadToSoftwareFactory/GitBasicsCz.git (fetch)
+origin  https://github.com/RoadToSoftwareFactory/GitBasicsCz.git (push)
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git fetch origin
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git pull origin
+Already up to date.
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git commit -a -m 'readme chnges'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git push origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': muskan2408
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/RoadToSoftwareFactory/GitBasicsCz.git/'
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git push origin master
+remote: Permission to RoadToSoftwareFactory/GitBasicsCz.git denied to muskan2408.
+fatal: unable to access 'https://github.com/RoadToSoftwareFactory/GitBasicsCz.git/': The requested URL returned error: 403
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git push origin master
+remote: Permission to RoadToSoftwareFactory/GitBasicsCz.git denied to muskan2408.
+fatal: unable to access 'https://github.com/RoadToSoftwareFactory/GitBasicsCz.git/': The requested URL returned error: 403
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git push origin master
+remote: Permission to RoadToSoftwareFactory/GitBasicsCz.git denied to muskan2408.
+fatal: unable to access 'https://github.com/RoadToSoftwareFactory/GitBasicsCz.git/': The requested URL returned error: 403
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git commit
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git push origin master
+remote: Permission to RoadToSoftwareFactory/GitBasicsCz.git denied to muskan2408.
+fatal: unable to access 'https://github.com/RoadToSoftwareFactory/GitBasicsCz.git/': The requested URL returned error: 403
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git push origin master
+remote: Permission to RoadToSoftwareFactory/GitBasicsCz.git denied to muskan2408.
+fatal: unable to access 'https://github.com/RoadToSoftwareFactory/GitBasicsCz.git/': The requested URL returned error: 403
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git remote add MyRepo https://github.com/RoadToSoftwareFactory/GitBasicsCz.git
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git remote
+MyRepo
+origin
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git remote -v
+MyRepo  https://github.com/RoadToSoftwareFactory/GitBasicsCz.git (fetch)
+MyRepo  https://github.com/RoadToSoftwareFactory/GitBasicsCz.git (push)
+origin  https://github.com/RoadToSoftwareFactory/GitBasicsCz.git (fetch)
+origin  https://github.com/RoadToSoftwareFactory/GitBasicsCz.git (push)
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git fetch myrepo
+fatal: 'myrepo' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git push
+remote: Permission to RoadToSoftwareFactory/GitBasicsCz.git denied to muskan2408.
+fatal: unable to access 'https://github.com/RoadToSoftwareFactory/GitBasicsCz.git/': The requested URL returned error: 403
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git checkout mybranch
+error: pathspec 'mybranch' did not match any file(s) known to git.
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ git checkout MyBranch
+error: pathspec 'MyBranch' did not match any file(s) known to git.
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ cd..
+bash: cd..: command not found
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ cd git demo
+bash: cd: too many arguments
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ cd gitdemo
+bash: cd: gitdemo: No such file or directory
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ cd desktop
+bash: cd: desktop: No such file or directory
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ cd/
+bash: cd/: No such file or directory
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ cd..
+bash: cd..: command not found
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ ls
+1/  10/  2/  3/  4/  5/  6/  7/  8/  9/  LICENSE  README.md
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ cd C:\Users\muska\Desktop\gitdemo
+bash: cd: C:UsersmuskaDesktopgitdemo: No such file or directory
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ cd ~/gitdemo
+bash: cd: /c/Users/muska/gitdemo: No such file or directory
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo/gitbasicscz (master)
+$ cd ..
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ push origin to master
+bash: push: command not found
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ push origin
+bash: push: command not found
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git push origin
+fatal: The current branch MyBranch has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin MyBranch
+
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git push origin to master
+error: src refspec to does not match any.
+error: failed to push some refs to 'origin'
+
+muskankataria24@LAPTOP-JOHFGE7S MINGW64 ~/Desktop/gitdemo (MyBranch)
+$ git commit
+[MyBranch 4392d64] Final Commit
+ 2 files changed, 4 insertions(+)
+ create mode 100644 newfile.txt
+
+muskank 
